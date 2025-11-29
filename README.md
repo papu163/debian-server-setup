@@ -18,3 +18,15 @@ vas a poner:
     tu_usuario  ALL=(ALL:ALL) ALL
 
 despues de eso presionaras ctrl + o y enter para guardar, para salir sera ctrl + x y enter
+
+ahora sal de tu sesion de root(ssh o fisico) y cambia tu usuario, dentro del usuario prueba el comando:
+
+    sudo whoami
+
+deberia de dar algo asi:
+
+    $ sudo whoami
+    [sudo] contraseña para urano:
+    root
+
+ya tienes sudo listo, con eso ya tienes un servidor listo para algunas cosas, ahora vamos al siguiente paso, instalar casaOS
