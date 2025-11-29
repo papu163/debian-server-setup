@@ -15,10 +15,10 @@ echo "Obteniendo interfaz de red principal..."
 INTERFACE=$(ip route show default | awk '{print $5}' | head -n1)
 echo "La interfaz principal es: $INTERFACE"
 echo "Creando copia de seguridad de /etc/network/interfaces en /home"
-dia=$(date)
+dia=$(date -a)
 hostname=$(hostname -s)
 archivo_cp="$hostname-$dia.txt"
-cp /etc/network/interfaces /home/$archivo_cp
+cp /etc/network/interfaces "/home/$archivo_cp"
 echo "Copia creada" 
 echo "Aplicando cambios en /etc/network/interfaces"
 echo "" > /etc/network/interfaces
