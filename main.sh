@@ -35,11 +35,9 @@ echo "" >> /etc/network/interfaces
 echo "address $ipv4_privada" >> /etc/network/interfaces
 echo "netmask $netmask" >> /etc/network/interfaces
 echo "gateway $gateway" >> /etc/network/interfaces
+echo "dns-nameservers $dns"
 echo "#ipv6" >> /etc/network/interfaces
 echo "iface $INTERFACE inet6 auto" >> /etc/network/interfaces
-#DNS
-echo "nameserver $dns" > /etc/resolv.conf
-#DNS
 systemctl restart networking.service
 #----Final----
 #Preparacion
@@ -53,7 +51,9 @@ ufw allow http
 ufw allow https
 ufw enable
 read -p "¿Desea usar ufw-docker(Bloquea a docker de sobrepasar el firewall)?[y/n]: " ufw_docker_create
-if [ "$ufw_docker_create" == "echo y" || "$ufw_docker_create" == "echo Y" ]; then
+yes1="y"
+yes="Y"
+if [ "$ufw_docker_create" == "$yes1" || "$ufw_docker_create" == "$yes" ]; then
     echo "Creando reglas de ufw-docker..."
     curl -O https://raw.githubusercontent.com/papu163/debian-server-setup/refs/heads/main/recursos/ufw-docker.txt
     cat ufw-docker.txt >> /etc/ufw/after.rules
