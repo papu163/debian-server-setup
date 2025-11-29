@@ -1,7 +1,7 @@
 # Setup para servidor de debian
 ¿Alguna vez has querido tener un homelab o un servidor en tu casa como varios youtubers o por privacidad pero se te hace algo complicado la configuracion inicial?
 
-Este repositorio abarca varias partes para tener un setup facil de hacer y usar. Hay dos partes, el manual y un setup con un script que facilita varias partes pero aun hay partes manuales(aun que solo es copiar y pegar algunos comandos). Usaremos CasaOS ya que es el mas facil de usar para selfhosting y configurar la version de docker compatible con CasaOS
+Este repositorio abarca varias partes para tener un setup facil de hacer y usar. Usaremos CasaOS ya que es el mas facil de usar para selfhosting y configurar la version de docker compatible con CasaOS
 
 ## Setup rapido con script
 
