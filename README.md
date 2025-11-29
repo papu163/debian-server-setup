@@ -1,4 +1,4 @@
-# debian-server-setup
+# Setup para servidor de debian
 Setup simple para debian, explicado tanto manualmente como con un script
 
 ## Setup rapido con script
