@@ -48,7 +48,7 @@ apt update && apt upgrade
 apt install sudo brightnessctl ufw -y
 echo "Preparando firewall(ufw)"
 ufw allow ssh
-ufw allow samba
+ufw allow Samba
 ufw allow http
 ufw allow https
 ufw enable
