@@ -53,7 +53,7 @@ ufw enable
 read -p "¿Desea usar ufw-docker(Bloquea a docker de sobrepasar el firewall)?[y/n]: " ufw_docker_create
 yes1="y"
 yes="Y"
-if [ "$ufw_docker_create" == "$yes1" || "$ufw_docker_create" == "$yes" ]; then
+if [[ "$ufw_docker_create" == "$yes1" || "$ufw_docker_create" == "$yes" ]]; then
     echo "Creando reglas de ufw-docker..."
     curl -O https://raw.githubusercontent.com/papu163/debian-server-setup/refs/heads/main/recursos/ufw-docker.txt
     cat ufw-docker.txt >> /etc/ufw/after.rules
