@@ -35,7 +35,7 @@ echo "" >> /etc/network/interfaces
 echo "address $ipv4_privada" >> /etc/network/interfaces
 echo "netmask $netmask" >> /etc/network/interfaces
 echo "gateway $gateway" >> /etc/network/interfaces
-echo "dns-nameservers $dns"
+echo "dns-nameservers $dns" >> /etc/network/interfaces
 echo "#ipv6" >> /etc/network/interfaces
 echo "iface $INTERFACE inet6 auto" >> /etc/network/interfaces
 systemctl restart networking.service
