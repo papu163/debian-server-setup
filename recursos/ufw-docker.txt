@@ -1,3 +1,4 @@
+# Fuente de https://github.com/chaifeng/ufw-docker
 # BEGIN UFW AND DOCKER
 *filter
 :ufw-user-forward - [0:0]
