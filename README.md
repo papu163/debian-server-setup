@@ -17,11 +17,11 @@ despues de la linea 47 que dice:
 
 vas a poner:
 
-    tu_usuario  ALL=(ALL:ALL) ALL
+    tu_usuario_de_instalacion  ALL=(ALL:ALL) ALL
 
 despues de eso presionaras ctrl + o y enter para guardar, para salir sera ctrl + x y enter
 
-ahora sal de tu sesion de root(ssh o fisico) y cambia tu usuario, dentro del usuario prueba el comando:
+ahora sal de tu sesion de root con el comando exit y cambia tu usuario a el usuario creado en la instalacion de debian, dentro del usuario prueba el comando:
 
     sudo whoami
 
