@@ -32,3 +32,32 @@ deberia de dar algo asi:
     root
 
 ya tienes sudo listo, con eso ya tienes un servidor listo para algunas cosas, ahora vamos al siguiente paso, instalar casaOS
+
+## CasaOS
+
+Ahora empezaremos con casaOS, CasaOS sirve para gestionar contenedores de docker de forma sencilla sin mucha complicacion como lo seria normalmente pero la instalacion basica de casOS lamentablemente tiene un error donde docker no funciona correctamente y se tiene que editar configuracion en systemd, abarcaremos ese error para configurarlo. Iniciaremos poniendo en la terminal(recomiendo ya empezar a usar ssh desde aca):
+
+    curl -fsSL https://get.casaos.io | sudo bash
+
+ya esta instalado pero te daras cuenta que al ir a donde te manda CasaOS no aparece ni la app store de casaOS y dice "Failed to load apps". La solucion es simple, pon el comando: 
+
+    sudo systemctl edit docker.service
+
+esto abrira el archivo de configuracion de docker en systemd, deberas de modificarlo para que quede asi:
+
+    ### Editing /etc/systemd/system/docker.service.d/override.conf
+    ### Anything between here and the comment below will become the contents of the drop-in file
+
+    [Service]
+    Environment=DOCKER_MIN_API_VERSION=1.24
+
+    ### Edits below this comment will be discarded
+
+ahora solo pon:
+
+    sudo systemctl restart docker
+
+Listo, ahora en teoria deberia de funcionar, si no funciona checa este link:
+
+    https://github.com/IceWhaleTech/CasaOS/issues/2443
+    
